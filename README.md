@@ -28,4 +28,47 @@ This mini project showcases a creative way to switch colors in different boxes o
 ---
 
 ## 📂 File Structure
+## 🧠 JavaScript: Color Switching Logic
+
+This script selects all elements with the class `.button` and adds a `click` event listener to each. Based on the `id` of the clicked button, it changes the `background-color` of the document body.
+
+---
+
+### ✅ Code:
+
+```js
+// Select all elements with the class 'button'
+const buttons = document.querySelectorAll('.button');
+
+// Select the body element
+const body = document.querySelector('body');
+
+// Iterate over each button
+buttons.forEach(function (button) {
+  console.log(button); // Log the current button element
+
+  // Add a click event listener to the button
+  button.addEventListener('click', function (e) {
+    console.log(e); // Log the full event object
+    console.log(e.target); // Log the clicked element
+
+    // Check the ID of the clicked element and change body background accordingly
+    if (e.target.id === 'grey') {
+      body.style.background = e.target.id;
+    }
+    if (e.target.id === 'white') {
+      body.style.background = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.background = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      body.style.background = e.target.id;
+    }
+    if (e.target.id === 'purple') {
+      body.style.background = e.target.id;
+    }
+  });
+});
+
 
